@@ -2,4 +2,4 @@
 for i in range(97, 123):
       if i == ord('e') or i == ord('q'):
             continue
-            print("{:c}".format(i), end="")
+print("{:c}".format(i), end="")

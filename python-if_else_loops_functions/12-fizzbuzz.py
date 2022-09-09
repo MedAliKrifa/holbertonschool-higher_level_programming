@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-for fizzbuzz in range(1,100):
+for fizzbuzz in range(1,101):
     if fizzbuzz % 15 == 0:
-        print("FizzBuzz")                                        
+        print("FizzBuzz ", end="")                                        
         continue
     elif fizzbuzz % 3 == 0:    
-        print("Fizz")                                        
+        print("Fizz ", end="")                                        
         continue
     elif fizzbuzz % 5 == 0:        
-        print("Buzz")                                    
+        print("Buzz ",  end="")                                    
         continue
-    print(fizzbuzz)
+    print(f"{fizzbuzz} ", end="")

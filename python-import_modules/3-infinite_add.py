@@ -4,7 +4,7 @@ if __name__ == "__main__":
     result = 0
     length = len(sys.argv)
     if length <= 1:
-        print("0")
+        print()
     else:
         for x in range(1, length):
             result = result + int(sys.argv[x])

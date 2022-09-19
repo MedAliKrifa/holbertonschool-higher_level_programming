@@ -2,4 +2,4 @@
 class Square:
     pass
 obj = Square()
-print(obj)
+

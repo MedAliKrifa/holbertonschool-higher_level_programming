@@ -2,9 +2,6 @@
 """class square to define a rectangle"""
 
 
-import sqlite3
-
-
 class Rectangle:
     """class square to define a Rectangle"""
     pass

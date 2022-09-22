@@ -42,13 +42,15 @@ class Rectangle:
             return 0
         else:
             return 2 * (self.__height + self.__width)
+
     def __str__(self):
-        if self.__height == 0 or self.__width == 0:
-            return 0
         print_rectangle = ""
-        for i in range(self.__height):
-            for j in range(self.__width):
-                print_rectangle += "#"
-            if i != (self.__height - 1):
-                print_rectangle += ("\n")
-        return (print_rectangle)
+        if self.__height == 0 or self.__width == 0:
+            return print_rectangle
+        else:
+            for i in range(self.__height):
+                for j in range(self.__width):
+                    print_rectangle = print_rectangle + "#"
+                if i != (self.__height - 1):
+                    print_rectangle = print_rectangle + ("\n")
+            return (print_rectangle)

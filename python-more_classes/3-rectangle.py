@@ -48,7 +48,7 @@ class Rectangle:
         print_rectangle = ""
         for i in range(self.__height):
             for j in range(self.__width):
-                print_rectangle = print_rectangle + "#"
+                print_rectangle += "#"
             if i != (self.__height - 1):
-                print_rectangle = print_rectangle + ("\n")
+                print_rectangle += ("\n")
         return (print_rectangle)

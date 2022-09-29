@@ -2,7 +2,7 @@
 
 
   
- check list
+ check that the list printed correctly 
   
  :: 
   
@@ -15,7 +15,7 @@
   
   
   
- check list sorted 
+ check print sorted 
   
  :: 
   
@@ -34,7 +34,7 @@
          >>> my_list.print_sorted() 
          [1, 2, 3, 4, 5] 
   
-check empty list
+ empty list 
   
  :: 
   
@@ -47,7 +47,7 @@ check empty list
          >>> my_list.print_sorted() 
          [] 
   
-check negative number
+ negative number 
   
  :: 
   
@@ -66,7 +66,7 @@ check negative number
          [-4, -2, 1, 3, 5] 
   
  :: 
-check regular print
+  
          >>> my_list = MyList() 
          >>> my_list.append("hello") 
          >>> my_list.append("ab") 

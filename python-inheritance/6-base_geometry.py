@@ -2,9 +2,6 @@
 """inheritance"""
 
 
-from logging import exception
-
-
 class BaseGeometry:
     """empty class"""
     def area(self):

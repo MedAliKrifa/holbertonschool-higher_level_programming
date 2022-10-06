@@ -12,4 +12,5 @@ try:
     res = load_from_json_file(filename)
 except FileNotFoundError:
     res = []
+
 save_to_json_file(res + argv[1:], filename)

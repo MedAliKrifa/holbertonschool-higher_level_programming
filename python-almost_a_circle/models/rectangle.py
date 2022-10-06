@@ -1,4 +1,3 @@
-
 #!/usr/bin/python3
 """ Rectangle """
 from models.base import Base
@@ -15,12 +14,12 @@ class Rectangle(Base):
         self.y = y
 
     def __str__(self):
-        """informations """
+        """ informations """
         return "[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}"\
             .format(self.id, self.x, self.y, self.width, self.height)
 
     def update(self, *args, **kwargs):
-        """ args assign"""
+        """ args assign """
         attrb = ["id", "width", "height", "x", "y"]
         if (args):
             for i in range(len(args)):
@@ -73,3 +72,18 @@ class Rectangle(Base):
             raise ValueError("x must be >= 0")
         else:
             self.__x = x
+
+    @property
+    def y(self):
+        """ y property """
+        return self.__y
+
+    @y.setter
+    def y(self, y):
+        """ y setter """
+        if type(y) is not int:
+            raise TypeError("y must be an integer")
+        elif y < 0:
+            raise ValueError("y must be >= 0")
+        else:
+            self.__y = y

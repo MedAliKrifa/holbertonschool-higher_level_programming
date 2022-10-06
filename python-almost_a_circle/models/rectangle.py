@@ -13,7 +13,23 @@ class Rectangle(Base):
         self.x = x
         self.y = y
 
+
     def __str__(self):
         """ rectangle's info """
         return "[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}"\
             .format(self.id, self.x, self.y, self.width, self.height)
+
+    def update(self, *args, **kwargs):
+        """ args assign """
+        attrb = ["id", "width", "height", "x", "y"]
+        if (args):
+            for i in range(len(args)):
+                setattr(self, attrb[i], args[i])
+        else:
+            for j in kwargs:
+                setattr(self, j, kwargs[j])
+
+    @property
+    def width(self):
+        """ width """
+        return self.__width

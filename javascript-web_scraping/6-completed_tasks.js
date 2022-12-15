@@ -1,20 +1,16 @@
 #!/usr/bin/node
 const request = require('request');
-const endpoint = 'https://jsonplaceholder.typicode.com/todos';
-
-request(endpoint, function (error, response, body) {
-    if (!error && response.statusCode === 200) {
-        const data = JSON.parse(body);
-
-        const counts = data.reduce((counts, todo) => {
-            if (todo.completed) {
-                counts[todo.userId] = (counts[todo.userId] || 0) + 1;
-            }
-            return counts;
-        }, {});
-
-        for (const userId in counts) {
-            console.log(`{'${userId}': ${counts[userId]},}`);
-        }
-    }
+request(process.argv[2], function (error, response, body) {
+  if (!error) {
+    const todos = JSON.parse(body);
+    const completed = {};
+    todos.forEach((todo) => {
+      if (todo.completed && completed[todo.userId] === undefined) {
+        completed[todo.userId] = 1;
+      } else if (todo.completed) {
+        completed[todo.userId] += 1;
+      }
+    });
+    console.log(completed);
+  }
 });
